@@ -59,3 +59,28 @@ print("odch.standard populacji", s)
 print("odch.standard z próby", s_p)
 print("kwartyle", kwartyle)
 print("mediana", M)
+
+
+t1_l = round(x_sr - s, 2)
+t1_p = round(x_sr + s, 2)
+typowe1 = [x for x in dane if (x >= t1_l and x <= t1_p)]
+print(t1_l, t1_p,  typowe1)
+
+t2_l = round(x_sr - 2*s, 2)
+t2_p = round(x_sr + 2*s, 2)
+typowe2 = [x for x in dane if (x >= t2_l and x <= t2_p)]
+print(t2_l, t2_p,  typowe2)
+
+
+odstajace = [x for x in dane if (x < t2_l or x > t2_p)]
+print(odstajace)
+
+
+#procent typowe1
+p1 = round(len(typowe1)/len(dane), 3)
+print(p1)
+
+
+#procent typowe2
+p2 = round(len(typowe2)/len(dane), 3)
+print(p2)
