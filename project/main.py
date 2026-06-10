@@ -625,14 +625,6 @@ def main():
     generuj_pdf(pdf_path, opis, modele, analizy_jedna, font_r, font_b)
     zapisz_excel(xlsx_path, dane_export, modele, analizy_jedna, x_nazwy, macierz_p)
 
-    print("\n" + "=" * 60)
-    print("Zapisano:")
-    print(f"  PDF:   {pdf_path}")
-    print(f"  Excel: {xlsx_path}")
-    print(f"  Wykresy: {KATALOG_WYNIKOW}")
-    print("=" * 60)
-    print("\nUzupełnij NAZWISKA_ZESPOLU i PODZIAL_OBOWIAZKOW przed oddaniem na Moodle.")
-
 
 if __name__ == "__main__":
     main()
